@@ -74,20 +74,51 @@ a {
   color: #ffffff;
 }
 
+.more_btn {
+  margin: 0 auto;
+  width: 173px;
+  width: calc(149px + 24 * ((100vw - 320px)
+        /
+        1600));
+  height: calc(39px + 4 * ((100vw - 320px)
+        /
+        1600));
+  border: 1px solid #00b346;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.more_btn button {
+  color: #00b346;
+  margin-right: 5px;
+  font-size: 18px;
+}
+.more_btn img {
+  position: relative;
+  top: 2px;
+}
+
+.rec_content {
+  overflow: hidden;
+  width: 100%;
+}
 .rec_content h2 {
   color: #383c45;
 }
 .rec_content__cards {
-  -moz-column-gap: 33px;
-       column-gap: 33px;
+  width: 100%;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .rec_content__card {
+  max-width: 340px;
+  width: 100%;
   border-radius: 30px;
   background: #ffdf6e;
-  width: 350px;
-  height: 320px;
+  height: 320px !important;
   position: relative;
-  padding: 30px 0 30px 20px;
+  margin-right: calc(16px + 14 * ((100vw - 320px)
+        /
+        1600));
 }
 .rec_content__card img {
   position: absolute;
@@ -96,7 +127,9 @@ a {
   filter: grayscale(10%);
 }
 .rec_content__card h4 {
-  font-size: 24px;
+  font-size: calc(18px + 6 * ((100vw - 320px)
+        /
+        1600));
   color: #383c45;
 }
 .rec_content__card p {
@@ -108,38 +141,42 @@ a {
   position: relative;
   z-index: 1;
 }
-.rec_content__more_btn {
-  margin: 0 auto;
-  width: 173px;
-  height: 43px;
-  border: 1px solid #00b346;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.rec_content__more_btn button {
-  color: #00b346;
-  margin-right: 5px;
-  font-size: 18px;
-}
-.rec_content__more_btn img {
-  position: relative;
-  top: 2px;
-}
 
 .interest_content h2 {
   color: #383c45;
 }
 .interest_content__card {
-  padding: 30px;
   height: 212px;
   border-radius: 30px;
   position: relative;
   color: #ffffff;
 }
-.interest_content__card img {
+.interest_content__card_img1 {
   position: absolute;
   right: 30px;
+  bottom: -3px;
+  width: calc(176px + 24 * ((100vw - 320px)
+        /
+        1600));
+  height: calc(193px + 15 * ((100vw - 320px)
+        /
+        1600));
+}
+.interest_content__card_img2 {
+  position: absolute;
+  right: 20px;
   bottom: 0;
+  width: 130px;
+  height: 160px;
+}
+.interest_content__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.interest_content__card p:nth-of-type(2) {
+  width: 60%;
 }
 .interest_content__card button {
   padding: 5px 20px;
@@ -148,11 +185,9 @@ a {
   bottom: 24px;
 }
 .interest_content .big_card {
-  width: calc(60% - 15px);
   background: #00b346;
 }
 .interest_content .little_card {
-  width: calc(40% - 15px);
   background: #fff4d4;
   color: #383c45;
 }
@@ -161,13 +196,90 @@ a {
   background: #ffdf6e;
 }
 
+.news {
+  overflow: hidden;
+}
 .news_content h2 {
   color: #383c45;
 }
 .news_content__card {
-  width: calc(25% - 22px);
+  max-width: 245px;
+  width: 100%;
 }
 .news_content__card img {
   width: 100%;
   height: 144px;
+}
+
+@media (max-width: 1000px) {
+  .interest_content__card_img2 {
+    right: 10px;
+    width: 120px;
+    height: 160px;
+  }
+}
+@media (max-width: 800px) {
+  .rec_content__card {
+    max-width: 300px;
+    height: 290px;
+  }
+  .interest_content__card p:nth-of-type(2) {
+    width: 55%;
+  }
+  .interest_content__card_img1 {
+    bottom: -4px;
+    right: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .interest_content__card_img2 {
+    right: 10px;
+    width: 100px;
+    height: 120px;
+  }
+  .news {
+    overflow: hidden;
+  }
+  .news_content h2 {
+    color: #383c45;
+  }
+  .news_content__card {
+    max-width: 210px;
+  }
+  .news_content__card img {
+    height: 118px;
+  }
+}
+@media (max-width: 650px) {
+  .interest_content__card_img1 {
+    right: 5px;
+  }
+  .interest_content__card_img2 {
+    display: none;
+  }
+}
+@media (max-width: 577px) {
+  .interest_content__card p:nth-of-type(2) {
+    width: 60%;
+  }
+  .interest_content__card_img2 {
+    display: block;
+    right: 10px;
+    width: 130px;
+    height: 160px;
+  }
+}
+@media (max-width: 444px) {
+  .rec_content__card {
+    max-width: 286px;
+    height: 260px;
+  }
+  .interest_content__card p:nth-of-type(2) {
+    width: 50%;
+  }
+  .interest_content__card_img2 {
+    right: 10px;
+    width: 130px;
+    height: 160px;
+  }
 }/*# sourceMappingURL=style.css.map */
