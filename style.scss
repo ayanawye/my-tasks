@@ -37,8 +37,14 @@ pre {
   margin: 0 !important;
 }
 button {
+  border: none;
+  background: none;
   cursor: pointer;
   border-radius: 8px !important;
+}
+a {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 $color_1: #00b346;
